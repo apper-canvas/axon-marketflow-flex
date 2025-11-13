@@ -46,8 +46,8 @@ const mainRoutes = [
     path: "reviews",
     element: <LoadingSuspense><Reviews /></LoadingSuspense>
   },
-  {
-    path: "seller-dashboard",
+{
+    path: "sell",
     element: <LoadingSuspense><SellerDashboard /></LoadingSuspense>
   },
   {
