@@ -1,11 +1,12 @@
 import { createBrowserRouter } from "react-router-dom";
-import { lazy, Suspense } from "react";
+import React, { Suspense, lazy } from "react";
 import Layout from "@/components/organisms/Layout";
 
 // Lazy load all page components
 const Home = lazy(() => import("@/components/pages/Home"));
 const Categories = lazy(() => import("@/components/pages/Categories"));
 const Orders = lazy(() => import("@/components/pages/Orders"));
+const Reviews = lazy(() => import("@/components/pages/Reviews"));
 const SellerDashboard = lazy(() => import("@/components/pages/SellerDashboard"));
 const Checkout = lazy(() => import("@/components/pages/Checkout"));
 const OrderConfirmation = lazy(() => import("@/components/pages/OrderConfirmation"));
@@ -37,12 +38,16 @@ const mainRoutes = [
     path: "categories",
     element: <LoadingSuspense><Categories /></LoadingSuspense>
   },
-  {
+{
     path: "orders",
     element: <LoadingSuspense><Orders /></LoadingSuspense>
   },
   {
-    path: "seller",
+    path: "reviews",
+    element: <LoadingSuspense><Reviews /></LoadingSuspense>
+  },
+  {
+    path: "seller-dashboard",
     element: <LoadingSuspense><SellerDashboard /></LoadingSuspense>
   },
   {

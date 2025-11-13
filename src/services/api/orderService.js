@@ -28,8 +28,9 @@ export const orderService = {
     const maxId = Math.max(...orders.map(o => o.Id), 0);
     const newOrder = {
       Id: maxId + 1,
-      ...orderData,
-      createdAt: new Date().toISOString()
+...orderData,
+      createdAt: new Date().toISOString(),
+      reviewable: false // Reviews allowed after delivery
     };
     
     orders.push(newOrder);
@@ -84,7 +85,11 @@ export const orderService = {
       throw new Error(`Order with ID ${id} not found`);
     }
     
-    orders[index].status = status;
+orders[index].status = status;
+    // Enable reviews when order is delivered
+    if (status === 'delivered') {
+      orders[index].reviewable = true;
+    }
     return { ...orders[index] };
   }
 };

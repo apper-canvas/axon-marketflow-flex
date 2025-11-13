@@ -197,10 +197,16 @@ const OrderConfirmation = () => {
         transition={{ delay: 0.6 }}
         className="mt-8 flex flex-col sm:flex-row gap-4 justify-center"
       >
-        <Link to="/orders">
+<Link to="/orders">
           <Button variant="primary" className="w-full sm:w-auto">
             <ApperIcon name="Package" className="w-4 h-4 mr-2" />
             View All Orders
+          </Button>
+        </Link>
+        <Link to="/reviews">
+          <Button variant="outline" className="w-full sm:w-auto">
+            <ApperIcon name="Star" className="w-4 h-4 mr-2" />
+            Leave Reviews
           </Button>
         </Link>
         <Link to="/">

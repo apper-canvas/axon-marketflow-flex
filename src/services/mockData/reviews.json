@@ -1,0 +1,93 @@
+[
+  {
+    "Id": 1,
+    "productId": 1,
+    "buyerId": 1001,
+    "rating": 5,
+    "comment": "Absolutely love this product! The quality exceeded my expectations and it arrived quickly. Would definitely recommend to anyone looking for a reliable solution.",
+    "buyerName": "Sarah Johnson",
+    "buyerEmail": "sarah.j@example.com",
+    "createdAt": "2024-01-15T10:30:00.000Z",
+    "updatedAt": "2024-01-15T10:30:00.000Z",
+    "helpful": 12,
+    "verified": true
+  },
+  {
+    "Id": 2,
+    "productId": 1,
+    "buyerId": 1002,
+    "rating": 4,
+    "comment": "Great product overall! Minor issues with packaging but the item itself is fantastic. Customer service was very helpful when I had questions.",
+    "buyerName": "Mike Chen",
+    "buyerEmail": "mike.chen@example.com",
+    "createdAt": "2024-01-12T14:20:00.000Z",
+    "updatedAt": "2024-01-12T14:20:00.000Z",
+    "helpful": 8,
+    "verified": true
+  },
+  {
+    "Id": 3,
+    "productId": 2,
+    "buyerId": 1003,
+    "rating": 5,
+    "comment": "Perfect for my needs! The design is elegant and the functionality is top-notch. I've been using it daily and it's holding up wonderfully.",
+    "buyerName": "Emily Rodriguez",
+    "buyerEmail": "emily.r@example.com",
+    "createdAt": "2024-01-10T09:15:00.000Z",
+    "updatedAt": "2024-01-10T09:15:00.000Z",
+    "helpful": 15,
+    "verified": true
+  },
+  {
+    "Id": 4,
+    "productId": 2,
+    "buyerId": 1004,
+    "rating": 3,
+    "comment": "It's okay, but not quite what I expected. The description could be more accurate about the size and features. Works fine but there are better options available.",
+    "buyerName": "David Thompson",
+    "buyerEmail": "david.t@example.com",
+    "createdAt": "2024-01-08T16:45:00.000Z",
+    "updatedAt": "2024-01-08T16:45:00.000Z",
+    "helpful": 4,
+    "verified": true
+  },
+  {
+    "Id": 5,
+    "productId": 3,
+    "buyerId": 1005,
+    "rating": 4,
+    "comment": "Very satisfied with this purchase! Good value for money and exactly what I was looking for. Shipping was fast and packaging was secure.",
+    "buyerName": "Lisa Wang",
+    "buyerEmail": "lisa.wang@example.com",
+    "createdAt": "2024-01-05T11:30:00.000Z",
+    "updatedAt": "2024-01-05T11:30:00.000Z",
+    "helpful": 7,
+    "verified": true
+  },
+  {
+    "Id": 6,
+    "productId": 4,
+    "buyerId": 1006,
+    "rating": 5,
+    "comment": "Outstanding quality and excellent service! This product has made my life so much easier. Highly recommend to anyone considering this purchase.",
+    "buyerName": "Robert Kim",
+    "buyerEmail": "robert.kim@example.com",
+    "createdAt": "2024-01-03T13:20:00.000Z",
+    "updatedAt": "2024-01-03T13:20:00.000Z",
+    "helpful": 20,
+    "verified": true
+  },
+  {
+    "Id": 7,
+    "productId": 5,
+    "buyerId": 1007,
+    "rating": 2,
+    "comment": "Unfortunately, this didn't meet my expectations. The quality feels cheap and it stopped working properly after just a few days. Would not recommend.",
+    "buyerName": "Jennifer Lee",
+    "buyerEmail": "jennifer.l@example.com",
+    "createdAt": "2024-01-01T08:45:00.000Z",
+    "updatedAt": "2024-01-01T08:45:00.000Z",
+    "helpful": 3,
+    "verified": true
+  }
+]

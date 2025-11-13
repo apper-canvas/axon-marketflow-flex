@@ -1,10 +1,11 @@
 import { useDispatch } from "react-redux";
-import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
+import { AnimatePresence, motion } from "framer-motion";
 import { toast } from "react-toastify";
+import { addToCart } from "@/store/slices/cartSlice";
 import { cn } from "@/utils/cn";
 import { formatPrice } from "@/utils/formatters";
-import { addToCart } from "@/store/slices/cartSlice";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
 import Badge from "@/components/atoms/Badge";
@@ -15,9 +16,9 @@ const ProductDetailModal = ({
   onClose 
 }) => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
   const [quantity, setQuantity] = useState(1);
   const [selectedImageIndex, setSelectedImageIndex] = useState(0);
-  
   if (!product) return null;
   
   const handleAddToCart = () => {
@@ -138,10 +139,10 @@ const ProductDetailModal = ({
                           {formatPrice(product.price)}
                         </div>
                         <div className="flex items-center space-x-4 text-sm text-gray-600">
-                          <span>{product.stock} in stock</span>
-                          <div className="flex items-center">
+<span>{product.stock} in stock</span>
+                          <div className="flex items-center cursor-pointer" onClick={() => navigate('/reviews')}>
                             <ApperIcon name="Star" className="w-4 h-4 text-yellow-400 mr-1" />
-                            <span>4.5 (128 reviews)</span>
+                            <span className="hover:text-primary transition-colors">View Reviews</span>
                           </div>
                         </div>
                       </div>

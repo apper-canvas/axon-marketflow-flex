@@ -23,7 +23,7 @@ const SellerDashboard = () => {
     description: "",
     price: "",
     category: "",
-    stock: "",
+stock: "",
     images: ["https://via.placeholder.com/400x300?text=Product+Image"]
   });
   const [formErrors, setFormErrors] = useState({});
@@ -62,7 +62,7 @@ const SellerDashboard = () => {
       price: "",
       category: "",
       stock: "",
-      images: ["https://via.placeholder.com/400x300?text=Product+Image"]
+images: ["https://via.placeholder.com/400x300?text=Product+Image"]
     });
     setFormErrors({});
     setEditingProduct(null);
@@ -98,7 +98,7 @@ const SellerDashboard = () => {
         price: parseFloat(formData.price),
         stock: parseInt(formData.stock),
         sellerId: "seller-1" // Mock seller ID
-      };
+};
       
       if (editingProduct) {
         await productService.update(editingProduct.Id, productData);
@@ -127,7 +127,7 @@ const SellerDashboard = () => {
       price: product.price.toString(),
       category: product.category,
       stock: product.stock.toString(),
-      images: product.images
+images: product.images
     });
     setShowAddForm(true);
   };
@@ -392,7 +392,7 @@ const SellerDashboard = () => {
                   </p>
                   
                   <div className="flex items-center justify-between mb-4">
-                    <div>
+<div>
                       <div className="text-lg font-bold text-primary">
                         {formatPrice(product.price)}
                       </div>

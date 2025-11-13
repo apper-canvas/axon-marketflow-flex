@@ -1,5 +1,7 @@
 import { useState, useEffect } from "react";
+import { useNavigate } from "react-router-dom";
 import { motion } from "framer-motion";
+import { toast } from "react-toastify";
 import { formatPrice, formatDateTime, getStatusColor, getStatusText } from "@/utils/formatters";
 import { orderService } from "@/services/api/orderService";
 import Loading from "@/components/ui/Loading";
@@ -7,13 +9,15 @@ import ErrorView from "@/components/ui/ErrorView";
 import Empty from "@/components/ui/Empty";
 import ApperIcon from "@/components/ApperIcon";
 import Badge from "@/components/atoms/Badge";
-
+import Button from "@/components/atoms/Button";
+import ReviewForm from "@/components/molecules/ReviewForm";
 const Orders = () => {
   const [orders, setOrders] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
-  const [expandedOrders, setExpandedOrders] = useState(new Set());
-  
+const [expandedOrders, setExpandedOrders] = useState(new Set());
+  const [showReviewForm, setShowReviewForm] = useState({});
+  const navigate = useNavigate();
   const loadOrders = async () => {
     try {
       setLoading(true);
@@ -31,7 +35,7 @@ const Orders = () => {
   };
   
   useEffect(() => {
-    loadOrders();
+loadOrders();
   }, []);
   
   const toggleOrderExpansion = (orderId) => {
@@ -59,6 +63,21 @@ const Orders = () => {
       default:
         return "Package";
     }
+};
+
+  const handleReviewProduct = (orderId, productId) => {
+    setShowReviewForm(prev => ({
+      ...prev,
+      [`${orderId}-${productId}`]: !prev[`${orderId}-${productId}`]
+    }));
+  };
+
+  const handleReviewSubmitted = (orderId, productId) => {
+    setShowReviewForm(prev => ({
+      ...prev,
+      [`${orderId}-${productId}`]: false
+    }));
+    toast.success("Review submitted successfully!");
   };
   
   if (loading) {
@@ -174,23 +193,51 @@ const Orders = () => {
                 >
                   <div className="p-6 space-y-6">
                     {/* Order Items */}
-                    <div>
+<div>
                       <h4 className="font-medium text-gray-800 mb-4">Order Items</h4>
                       <div className="space-y-3">
                         {order.items.map((item, itemIndex) => (
-                          <div key={itemIndex} className="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
-                            <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
-                              <ApperIcon name="Package" className="w-6 h-6 text-gray-400" />
+                          <div key={itemIndex}>
+                            <div className="flex items-center space-x-4 p-3 bg-gray-50 rounded-lg">
+                              <div className="w-12 h-12 bg-gray-200 rounded-lg flex items-center justify-center">
+                                <ApperIcon name="Package" className="w-6 h-6 text-gray-400" />
+                              </div>
+                              <div className="flex-1">
+                                <p className="font-medium text-gray-800">Product #{item.productId}</p>
+                                <p className="text-sm text-gray-600">
+                                  Quantity: {item.quantity} × {formatPrice(item.price)}
+                                </p>
+                              </div>
+                              <div className="font-semibold text-gray-800">
+                                {formatPrice(item.price * item.quantity)}
+                              </div>
+                              {order.status === 'delivered' && order.reviewable && (
+                                <Button
+                                  size="sm"
+                                  variant="outline"
+                                  onClick={() => handleReviewProduct(order.Id, item.productId)}
+                                  className="ml-2"
+                                >
+                                  <ApperIcon name="Star" className="w-4 h-4 mr-1" />
+                                  Review
+                                </Button>
+                              )}
                             </div>
-                            <div className="flex-1">
-                              <p className="font-medium text-gray-800">Product #{item.productId}</p>
-                              <p className="text-sm text-gray-600">
-                                Quantity: {item.quantity} × {formatPrice(item.price)}
-                              </p>
-                            </div>
-                            <div className="font-semibold text-gray-800">
-                              {formatPrice(item.price * item.quantity)}
-                            </div>
+                            
+                            {/* Review Form */}
+                            {showReviewForm[`${order.Id}-${item.productId}`] && (
+                              <div className="mt-3 ml-16">
+                                <ReviewForm
+                                  productId={item.productId}
+                                  buyerId={order.buyerId || 1001}
+                                  buyerName="John Doe"
+                                  buyerEmail="john@example.com"
+                                  onReviewSubmitted={() => handleReviewSubmitted(order.Id, item.productId)}
+                                  onCancel={() => handleReviewProduct(order.Id, item.productId)}
+                                  className="border-l-4 border-primary pl-4"
+                                />
+                              </div>
+                            )}
                           </div>
                         ))}
                       </div>
@@ -231,7 +278,7 @@ const Orders = () => {
             </motion.div>
           );
         })}
-      </div>
+</div>
     </div>
   );
 };
