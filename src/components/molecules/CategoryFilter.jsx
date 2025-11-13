@@ -20,17 +20,18 @@ const CategoryFilter = ({
     setExpandedCategories(newExpanded);
   };
   
-  const handleCategorySelect = (categoryId) => {
-    const newSelected = new Set(selectedCategories);
-    if (newSelected.has(categoryId)) {
-      newSelected.delete(categoryId);
+const handleCategorySelect = (categoryId) => {
+    const newSelected = [...selectedCategories];
+    if (newSelected.includes(categoryId)) {
+      const index = newSelected.indexOf(categoryId);
+      newSelected.splice(index, 1);
     } else {
-      newSelected.add(categoryId);
+      newSelected.push(categoryId);
     }
-    onCategoryChange(Array.from(newSelected));
+    onCategoryChange(newSelected);
   };
   
-  const renderCategory = (category, level = 0) => {
+const renderCategory = (category, level = 0) => {
     const hasChildren = categories.some(cat => cat.parentId === category.Id);
     const isExpanded = expandedCategories.has(category.Id);
     const isSelected = selectedCategories.includes(category.Id);

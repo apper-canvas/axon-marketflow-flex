@@ -15,24 +15,36 @@ const Home = () => {
   const navigate = useNavigate();
   
   const [categories, setCategories] = useState([]);
-  const [selectedCategories, setSelectedCategories] = useState([]);
+const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedProduct, setSelectedProduct] = useState(null);
   const [showFilters, setShowFilters] = useState(false);
   const [sortBy, setSortBy] = useState("newest");
   
   const searchQuery = searchParams.get("search") || "";
   
-  const filters = {
+const filters = {
+    categories: selectedCategories.length > 0 ? selectedCategories : null,
     search: searchQuery,
     categories: selectedCategories,
     sortBy
   };
   
-  useEffect(() => {
+useEffect(() => {
     const loadCategories = async () => {
       try {
         const categoryData = await categoryService.getAll();
         setCategories(categoryData);
+        
+        // Handle URL category parameter from Categories page navigation
+        const urlParams = new URLSearchParams(window.location.search);
+        const categoryParam = urlParams.get('categories');
+        if (categoryParam) {
+          // Find category by name and set its ID as selected
+          const category = categoryData.find(cat => cat.name === decodeURIComponent(categoryParam));
+          if (category) {
+            setSelectedCategories([category.Id]);
+          }
+        }
       } catch (error) {
         console.error("Failed to load categories:", error);
       }

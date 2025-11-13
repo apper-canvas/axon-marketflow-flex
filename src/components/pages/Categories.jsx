@@ -44,7 +44,7 @@ const Categories = () => {
     loadData();
   }, []);
   
-  const handleCategoryClick = (categoryName) => {
+const handleCategoryClick = (categoryName) => {
     navigate(`/?categories=${encodeURIComponent(categoryName)}`);
   };
   
