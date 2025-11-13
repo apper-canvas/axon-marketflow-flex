@@ -1,0 +1,172 @@
+[
+  {
+    "Id": 1,
+    "name": "Electronics",
+    "parentId": null
+  },
+  {
+    "Id": 2,
+    "name": "Smartphones",
+    "parentId": 1
+  },
+  {
+    "Id": 3,
+    "name": "Laptops",
+    "parentId": 1
+  },
+  {
+    "Id": 4,
+    "name": "Audio",
+    "parentId": 1
+  },
+  {
+    "Id": 5,
+    "name": "Clothing",
+    "parentId": null
+  },
+  {
+    "Id": 6,
+    "name": "Men's Clothing",
+    "parentId": 5
+  },
+  {
+    "Id": 7,
+    "name": "Women's Clothing",
+    "parentId": 5
+  },
+  {
+    "Id": 8,
+    "name": "Kids' Clothing",
+    "parentId": 5
+  },
+  {
+    "Id": 9,
+    "name": "Home & Garden",
+    "parentId": null
+  },
+  {
+    "Id": 10,
+    "name": "Kitchen",
+    "parentId": 9
+  },
+  {
+    "Id": 11,
+    "name": "Furniture",
+    "parentId": 9
+  },
+  {
+    "Id": 12,
+    "name": "Garden Tools",
+    "parentId": 9
+  },
+  {
+    "Id": 13,
+    "name": "Books",
+    "parentId": null
+  },
+  {
+    "Id": 14,
+    "name": "Fiction",
+    "parentId": 13
+  },
+  {
+    "Id": 15,
+    "name": "Non-Fiction",
+    "parentId": 13
+  },
+  {
+    "Id": 16,
+    "name": "Technology",
+    "parentId": 13
+  },
+  {
+    "Id": 17,
+    "name": "Sports",
+    "parentId": null
+  },
+  {
+    "Id": 18,
+    "name": "Fitness Equipment",
+    "parentId": 17
+  },
+  {
+    "Id": 19,
+    "name": "Outdoor Sports",
+    "parentId": 17
+  },
+  {
+    "Id": 20,
+    "name": "Health",
+    "parentId": null
+  },
+  {
+    "Id": 21,
+    "name": "Supplements",
+    "parentId": 20
+  },
+  {
+    "Id": 22,
+    "name": "Personal Care",
+    "parentId": 20
+  },
+  {
+    "Id": 23,
+    "name": "Toys",
+    "parentId": null
+  },
+  {
+    "Id": 24,
+    "name": "Educational Toys",
+    "parentId": 23
+  },
+  {
+    "Id": 25,
+    "name": "Action Figures",
+    "parentId": 23
+  },
+  {
+    "Id": 26,
+    "name": "Automotive",
+    "parentId": null
+  },
+  {
+    "Id": 27,
+    "name": "Car Accessories",
+    "parentId": 26
+  },
+  {
+    "Id": 28,
+    "name": "Tools",
+    "parentId": 26
+  },
+  {
+    "Id": 29,
+    "name": "Food",
+    "parentId": null
+  },
+  {
+    "Id": 30,
+    "name": "Organic",
+    "parentId": 29
+  },
+  {
+    "Id": 31,
+    "name": "Beverages",
+    "parentId": 29
+  },
+  {
+    "Id": 32,
+    "name": "Beauty",
+    "parentId": null
+  },
+  {
+    "Id": 33,
+    "name": "Skincare",
+    "parentId": 32
+  },
+  {
+    "Id": 34,
+    "name": "Makeup",
+    "parentId": 32
+  }
+]

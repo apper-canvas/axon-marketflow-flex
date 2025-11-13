@@ -1,0 +1,170 @@
+[
+  {
+    "Id": 1,
+    "sellerId": "seller-1",
+    "title": "Wireless Bluetooth Headphones",
+    "description": "Premium quality wireless headphones with noise cancellation and 30-hour battery life. Perfect for music lovers and professionals.",
+    "price": 129.99,
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1583394838336-acd977736f90?w=400&h=300&fit=crop"
+    ],
+    "stock": 25,
+    "createdAt": "2024-01-15T10:00:00Z"
+  },
+  {
+    "Id": 2,
+    "sellerId": "seller-2",
+    "title": "Organic Cotton T-Shirt",
+    "description": "Comfortable and sustainable organic cotton t-shirt available in multiple colors. Ethically made and environmentally friendly.",
+    "price": 24.99,
+    "category": "Clothing",
+    "images": [
+      "https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1576566588028-4147f3842f27?w=400&h=300&fit=crop"
+    ],
+    "stock": 50,
+    "createdAt": "2024-01-14T14:30:00Z"
+  },
+  {
+    "Id": 3,
+    "sellerId": "seller-1",
+    "title": "Smart Fitness Watch",
+    "description": "Advanced fitness tracker with heart rate monitoring, GPS, and smartphone integration. Track your health and stay connected.",
+    "price": 199.99,
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1508685096489-7aacd43bd3b1?w=400&h=300&fit=crop"
+    ],
+    "stock": 15,
+    "createdAt": "2024-01-13T09:15:00Z"
+  },
+  {
+    "Id": 4,
+    "sellerId": "seller-3",
+    "title": "JavaScript Programming Guide",
+    "description": "Comprehensive guide to modern JavaScript development. Perfect for beginners and experienced developers looking to upgrade their skills.",
+    "price": 39.99,
+    "category": "Books",
+    "images": [
+      "https://images.unsplash.com/photo-1544716278-ca5e3f4abd8c?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=300&fit=crop"
+    ],
+    "stock": 100,
+    "createdAt": "2024-01-12T16:45:00Z"
+  },
+  {
+    "Id": 5,
+    "sellerId": "seller-2",
+    "title": "Ceramic Coffee Mug Set",
+    "description": "Beautiful handcrafted ceramic mugs perfect for your morning coffee. Set of 4 mugs in different colors with matching saucers.",
+    "price": 49.99,
+    "category": "Home & Garden",
+    "images": [
+      "https://images.unsplash.com/photo-1514228742587-6b1558fcf93a?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1572119865084-43c5d04daaf8?w=400&h=300&fit=crop"
+    ],
+    "stock": 30,
+    "createdAt": "2024-01-11T11:20:00Z"
+  },
+  {
+    "Id": 6,
+    "sellerId": "seller-1",
+    "title": "Yoga Exercise Mat",
+    "description": "Non-slip premium yoga mat with excellent cushioning. Perfect for yoga, pilates, and home workouts. Includes carrying strap.",
+    "price": 34.99,
+    "category": "Sports",
+    "images": [
+      "https://images.unsplash.com/photo-1544367567-0f2fcb009e0b?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1593349480506-8433634cdcbe?w=400&h=300&fit=crop"
+    ],
+    "stock": 40,
+    "createdAt": "2024-01-10T13:10:00Z"
+  },
+  {
+    "Id": 7,
+    "sellerId": "seller-4",
+    "title": "Skincare Routine Set",
+    "description": "Complete skincare set with cleanser, toner, serum, and moisturizer. Suitable for all skin types with natural ingredients.",
+    "price": 89.99,
+    "category": "Health",
+    "images": [
+      "https://images.unsplash.com/photo-1556229010-aa58c280d0ce?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=400&h=300&fit=crop"
+    ],
+    "stock": 20,
+    "createdAt": "2024-01-09T15:55:00Z"
+  },
+  {
+    "Id": 8,
+    "sellerId": "seller-3",
+    "title": "Remote Control Drone",
+    "description": "High-quality drone with 4K camera and 25-minute flight time. Perfect for aerial photography and recreational flying.",
+    "price": 299.99,
+    "category": "Toys",
+    "images": [
+      "https://images.unsplash.com/photo-1473968512647-3e447244af8f?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1527977966376-1c8408f9f108?w=400&h=300&fit=crop"
+    ],
+    "stock": 8,
+    "createdAt": "2024-01-08T12:30:00Z"
+  },
+  {
+    "Id": 9,
+    "sellerId": "seller-2",
+    "title": "Car Phone Mount",
+    "description": "Universal car phone holder with 360-degree rotation and strong suction cup. Compatible with all smartphone sizes.",
+    "price": 19.99,
+    "category": "Automotive",
+    "images": [
+      "https://images.unsplash.com/photo-1558618490-fcd25c85cd64?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1549317661-bd32c8ce0db2?w=400&h=300&fit=crop"
+    ],
+    "stock": 75,
+    "createdAt": "2024-01-07T10:40:00Z"
+  },
+  {
+    "Id": 10,
+    "sellerId": "seller-1",
+    "title": "Organic Honey Set",
+    "description": "Pure organic honey from local beekeepers. Set includes wildflower, clover, and orange blossom honey in glass jars.",
+    "price": 45.99,
+    "category": "Food",
+    "images": [
+      "https://images.unsplash.com/photo-1587049352846-4a222e784d38?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1558642452-9d2a7deb7f62?w=400&h=300&fit=crop"
+    ],
+    "stock": 35,
+    "createdAt": "2024-01-06T14:15:00Z"
+  },
+  {
+    "Id": 11,
+    "sellerId": "seller-4",
+    "title": "Natural Face Serum",
+    "description": "Anti-aging face serum with vitamin C and hyaluronic acid. Brightens skin and reduces fine lines for a youthful glow.",
+    "price": 54.99,
+    "category": "Beauty",
+    "images": [
+      "https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1598300042247-d088f8ab3a91?w=400&h=300&fit=crop"
+    ],
+    "stock": 60,
+    "createdAt": "2024-01-05T16:25:00Z"
+  },
+  {
+    "Id": 12,
+    "sellerId": "seller-3",
+    "title": "Wireless Phone Charger",
+    "description": "Fast wireless charging pad compatible with all Qi-enabled devices. Sleek design with LED indicator and overcharge protection.",
+    "price": 29.99,
+    "category": "Electronics",
+    "images": [
+      "https://images.unsplash.com/photo-1586953208448-b95a79798f07?w=400&h=300&fit=crop",
+      "https://images.unsplash.com/photo-1609592919371-2b7671acc3e5?w=400&h=300&fit=crop"
+    ],
+    "stock": 45,
+    "createdAt": "2024-01-04T09:50:00Z"
+  }
+]
