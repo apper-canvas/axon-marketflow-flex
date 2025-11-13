@@ -29,13 +29,12 @@ const Header = ({ className }) => {
     dispatch(toggleCart());
   };
   
-  const navigationItems = [
+const navigationItems = [
     { name: "Home", href: "/", icon: "Home" },
     { name: "Categories", href: "/categories", icon: "Grid3X3" },
     { name: "Orders", href: "/orders", icon: "Package" },
-    { name: "Sell", href: "/seller", icon: "Store" }
+    { name: "Sell", href: "/sell", icon: "Store" }
   ];
-  
   return (
     <header className={cn("sticky top-0 z-50 bg-white/95 backdrop-blur-lg border-b border-gray-200 shadow-sm", className)}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
